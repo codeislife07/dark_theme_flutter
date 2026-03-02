@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import 'colors.dart';
 
+const fontFamily = 'okra'; // Replace with your custom/local font family
+const fontHeader = 'okra'; // Replace with your custom/local font family
 
-const fontFamily = 'Acme';
-const fontHeader = 'Raleway';
 TextTheme buildTextTheme(
   TextTheme base,
   String? language, {
@@ -14,66 +12,51 @@ TextTheme buildTextTheme(
 }) {
   return base
       .copyWith(
-        displayLarge: GoogleFonts.getFont(
-          fontHeader,
-          textStyle: base.displayLarge!.copyWith(
-            fontWeight: FontWeight.w700,
-          ),
-        ).copyWith(
-
-            /// If using the custom font
-            /// un-comment below and clone to other headline.., bodyText..
-            // fontFamily: 'Your Custom Font',
-            ),
-        displayMedium: GoogleFonts.getFont(
-          fontHeader,
-          textStyle: base.displayMedium!.copyWith(fontWeight: FontWeight.w700),
+        displayLarge: base.displayLarge!.copyWith(
+          fontFamily: fontHeaders,
+          fontWeight: FontWeight.w700,
         ),
-        displaySmall: GoogleFonts.getFont(
-          fontHeader,
-          textStyle: base.displaySmall!.copyWith(fontWeight: FontWeight.w700),
+        displayMedium: base.displayMedium!.copyWith(
+          fontFamily: fontHeaders,
+          fontWeight: FontWeight.w700,
         ),
-        headlineMedium: GoogleFonts.getFont(
-          fontHeader,
-          textStyle: base.headlineMedium!.copyWith(fontWeight: FontWeight.w700),
+        displaySmall: base.displaySmall!.copyWith(
+          fontFamily: fontHeaders,
+          fontWeight: FontWeight.w700,
         ),
-        headlineSmall: GoogleFonts.getFont(
-          fontHeader,
-          textStyle: base.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
+        headlineMedium: base.headlineMedium!.copyWith(
+          fontFamily: fontHeaders,
+          fontWeight: FontWeight.w700,
         ),
-        titleLarge: GoogleFonts.getFont(
-          fontHeader,
-          textStyle: base.titleLarge!.copyWith(
-            fontWeight: FontWeight.normal,
-          ),
-        ).copyWith(
-            // fontFamily: 'Your Custom Font',
-            ),
-        bodySmall: GoogleFonts.getFont(
-          fontFamily,
-          textStyle: base.bodySmall!
-              .copyWith(fontWeight: FontWeight.w400, fontSize: 14.0),
+        headlineSmall: base.headlineSmall!.copyWith(
+          fontFamily: fontHeaders,
+          fontWeight: FontWeight.w500,
         ),
-        titleMedium: GoogleFonts.getFont(
-          fontFamily,
-          textStyle: base.titleMedium!.copyWith(),
+        titleLarge: base.titleLarge!.copyWith(
+          fontFamily: fontHeaders,
+          fontWeight: FontWeight.normal,
         ),
-        titleSmall: GoogleFonts.getFont(
-          fontFamily,
-          textStyle: base.titleSmall!.copyWith(),
+        bodySmall: base.bodySmall!.copyWith(
+          fontFamily: fontFamilys,
+          fontWeight: FontWeight.w400,
+          fontSize: 14.0,
         ),
-        bodyLarge: GoogleFonts.getFont(
-          fontFamily,
-          textStyle: base.bodyLarge!.copyWith(),
+        titleMedium: base.titleMedium!.copyWith(
+          fontFamily: fontFamilys,
         ),
-        bodyMedium: GoogleFonts.getFont(
-          fontFamily,
-          textStyle: base.bodyMedium!.copyWith(),
+        titleSmall: base.titleSmall!.copyWith(
+          fontFamily: fontFamilys,
         ),
-        labelLarge: GoogleFonts.getFont(
-          fontFamily,
-          textStyle: base.labelLarge!
-              .copyWith(fontWeight: FontWeight.w400, fontSize: 14.0),
+        bodyLarge: base.bodyLarge!.copyWith(
+          fontFamily: fontFamilys,
+        ),
+        bodyMedium: base.bodyMedium!.copyWith(
+          fontFamily: fontFamilys,
+        ),
+        labelLarge: base.labelLarge!.copyWith(
+          fontFamily: fontFamilys,
+          fontWeight: FontWeight.w400,
+          fontSize: 14.0,
         ),
       )
       .apply(
